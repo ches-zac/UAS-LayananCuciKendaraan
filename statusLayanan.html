@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mocuci.id</title>
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@200;300;500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        .daftar{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 19px;
+            color: #000000;
+        }
+
+        .button1{
+            background-color: #3297D3; 
+            width: 113px;
+            height: 50px;
+            left: 1278px;
+            top: 39px;
+            border-radius: 15px;
+            color: #FFFFFF;
+        }
+
+        .box {
+            box-sizing: border-box;
+            width: 1128px;
+            margin-left: 50px;
+            margin-bottom: 32px;
+            background: #FFFDFD;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .status {margin-top: 57px;}
+        
+        .timeline {
+            border-left: 3px solid #6D6D6D;
+            /**/
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+            margin-left: 110px;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            padding: 50px;
+            list-style: none;
+            text-align: left;
+            max-width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .timeline {
+                max-width: 98%;
+                padding: 25px;
+            }
+        }
+
+        .timeline .event {
+            /*border-bottom: 1px dashed #e8ebf1;*/
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        @media (max-width: 767px) {
+            .timeline .event {
+                padding-top: 30px;
+            }
+        }
+
+        .timeline .event:last-of-type {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+
+        .timeline .event:before,
+        .timeline .event:after {
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+
+        .timeline .event:before {
+            left: -207px;
+            content: attr(data-date);
+            text-align: right;
+            min-width: 120px;
+        }
+
+        @media (max-width: 767px) {
+            .timeline .event:before {
+                left: 0px;
+                text-align: left;
+            }
+        }
+
+        .timeline .event:after {
+            -webkit-box-shadow: 0 0 0 5px #6D6D6D;
+            box-shadow: 0 0 0 5px #6D6D6D;
+            left: -55.8px;
+            background: #6D6D6D;
+            border-radius: 50%;
+            height: 9px;
+            width: 9px;
+            content: "";
+            top: 15px;
+        }
+
+        @media (max-width: 767px) {
+            .timeline .event:after {
+                left: -31.8px;
+            }
+        }
+
+        .rtl .timeline {
+            border-left: 0;
+            text-align: right;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            border-right: 3px solid #727cf5;
+        }
+
+        .rtl .timeline .event::before {
+            left: 0;
+            right: -170px;
+        }
+
+        .rtl .timeline .event::after {
+            left: 0;
+            right: -55.8px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid" style="background-color: #505050;">
+        <div class="container">
+
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="navbar-nav" style="font-size: 16px; align-items: center;">
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #FFFFFF;" >Beranda </a>  
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #FFFFFF;" >Cuci Kendaraan </a>
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #FFFFFF;" >Cara Pemesanan </a>
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #FFFFFF;" >Syarat & Ketentuan </a>
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #FFFFFF;" >Tentang Kami </a>
+                    <button class="button1 btn-sm btn-outline-secondary" type="button"><b>Masuk</b></button>
+                </div>
+                </div>
+            <nav class="navbar navbar-expand-xl navbar-dark " >  
+                <a class="navbar-brand" href="#"><img src="img/logo4.png" alt=""></img></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav offset-1" style="font-size: 16px; align-items: center;">
+                            <a class="nav-link active" aria-current="page" href="#" >Beranda </a> &emsp; 
+                            <a class="nav-link active" aria-current="page" href="#" >Cuci Kendaraan </a>&emsp;
+                            <a class="nav-link active" aria-current="page" href="#" >Cara Pemesanan </a>&emsp;
+                            <a class="nav-link active" aria-current="page" href="#" >Syarat & Ketentuan </a>&emsp;
+                            <a class="nav-link active" aria-current="page" href="#" >Tentang Kami </a>&emsp; &ensp;
+                            <a class="nav-link active" aria-current="page" href="#" ><img src="img/Ellipse.png" alt="profil" width="81" height="75"></a>
+                        </div>
+                </div>         
+            </nav>
+        </div>
+    </div>
+
+    <!--Main content-->
+    <div class="container-fluid" style="background-color: #FFFFFF; height: 2023px;">
+        <div class="container">
+            <div class="box status">
+                <h1 style="font-weight: 700; font-size: 48px;line-height: 58px; text-align: left;">Status Layanan : Selesai</h1>
+            </div>
+            <div class="box ket">
+                <div style="display: inline-flex; padding-right: 40px; align-self:stretch;"><img src="img/checklist.png" alt="" width="120" height="120"></div>
+                <div style="display: inline-block; font-size: 32px; line-height: 39px;">
+                    <p style="font-weight: 600;">Diterima pada 13-12-2022 16.20</p>
+                    <p style="font-weight: 400;">Dikirim oleh Adi Nuyana - 1512621021</p>
+                </div>
+            </div>
+            <div class="box">
+                <p style="font-weight: 400; font-size: 32px; line-height: 39px;">Nomor Transaksi : <b>MCCID05</b></p> <br>
+                <hr>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <ul class="timeline">
+                                <li class="event" data-date="16.20">
+                                    <p>Kendaraan telah diterima Customer. <br> Penerima : Dava Ardian.</p>
+                                </li>
+                                <li class="event" data-date="16.05">
+                                    <p>Kendaraan sedang dibawa staf mocuci menuju ke lokasimu.</p>
+                                </li>
+                                <li class="event" data-date="16.00">
+                                    <p>Kendaraanmu telah selesai dicuci.</p>
+                                </li>
+                                <li class="event" data-date="14.00">
+                                    <p>Kendaraanmu sedang dalam proses pencucian.</p>
+                                </li>
+                                <li class="event" data-date="13.55">
+                                    <p>Kendaraanmu telah sampai di outlet mocuci Rawamangun.</p>
+                                </li>
+                                <li class="event" data-date="13.40">
+                                    <p>Kendaraanmu sedang dibawa staf menuju ke outlet Mocuci Rawamngun.</p>
+                                </li>
+                                <li class="event" data-date="13.35">
+                                    <p>Staf Mocuci telah sampai di lokasimu.</p>
+                                </li>
+                                <li class="event" data-date="13.10">
+                                    <p>Staf Mocuci sedang menuju ke lokasimu.</p>
+                                </li>
+                                <li class="event" data-date="13.00">
+                                    <p>Mocuci Rawamangun telah mengatur penjemputan kendaraanmu. Menunggu staf Mocuci menuju lokasi penjemputan.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-fluid" style="background-color: #505050; font-size: 13px;">
+        <div class="container">
+            <div class="row " >
+                <div class="col-xl-4  my-xl-5 col-lg-4  my-lg-5 "><img src="img/logo4.png" alt="">
+                    <p style="font-size: 16px; color:#FFFFFF; ">
+                        PT Mocuci Indo<br>
+                        Parkir Spiral lantai 3<br>
+                        Rawamangun Muka No. 33<br>
+                        Jakarta Timur 13230
+                    </p><br>
+
+                    <p style="color: #FFFFFF; font-size: 24px; ">
+                        Wilayah Operasional & Jam Kerja
+                    </p>
+                    <p style="font-size: 16px; color:#FFFFFF; ">
+                        Rawamangun<br>
+                        Kelapa Gading<br>
+                        Bintaro<br>
+                        Senin - Minggu (08.00 - 17.00)
+                    </p>
+                
+                </div>
+    
+                <div class="col-xl-3 offset-xl-1 my-xl-5 
+                col-lg-3 offset-lg-1 my-lg-5">
+                    <br><p></p>
+                    <br><p></p>
+                    <h4 style="color: #FFFFFF; font-size: 29px;">Layanan</h4><br>
+                    <a style="text-decoration:none; color: #F9BF3B; font-size: 16px;" href="#OM">Paket Ordinary Motor</a><br><br>
+                    <a style="text-decoration:none; color: #F9BF3B; font-size: 16px;" href="#EM">Paket Extraordinary Motor</a><br><br>
+                    <a style="text-decoration:none; color: #F9BF3B; font-size: 16px;" href="#OC">Paket Ordinary Mobil</a><br><br>
+                    <a style="text-decoration:none; color: #F9BF3B; font-size: 16px;" href="#EC">Paket Extraordinary Mobil</a><br><br>
+                    <a style="text-decoration:none; color: #F9BF3B; font-size: 16px;" href="#EC2">Paket Anti-Mainstream Mobil</a>
+                </div>
+    
+                <div class="col-xl-3 offset-xl-1 my-xl-5
+                col-lg-3 offset-lg-1 my-lg-5">
+                    <br><p></p>
+                    <br><p></p>
+                    <h4 style="color: #FFFFFF; font-size: 29px;">Informasi</h4><br>
+                    <a style="text-decoration:none; color: #F9BF3B; font-size: 16px;" href="#">Tentang Kami</a><br><br>
+                    <a style="text-decoration:none; color: #F9BF3B; font-size: 16px;" href="#">FAQ</a>
+                </div>
+                <br>  <p> </p>
+                <br>  <p> </p>
+                <br>  <p> </p>
+                <br>  <p> </p>
+                <br>  <p> </p>
+                <br>  <p> </p>
+                    <center style="color: #FFFFFF;">© mocuci.id 2022. All rights reserved</center>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

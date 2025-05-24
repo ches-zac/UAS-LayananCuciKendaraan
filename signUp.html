@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daftar</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial';
+            font-style: normal;
+        }
+
+        body {
+            position: relative;
+            width: 1440px;
+            height: 1024px;
+            margin: 0px auto;
+            background: #FFFFFF;
+        }
+
+        header {
+            float: left;
+            z-index: 10;
+        }
+
+        .backgroundIMG {
+            float: left;
+            display: block;
+            z-index: -1;
+            position: absolute;
+            width: 50%;
+            height: 1024px;
+            left: 0px;
+            top: 0px;
+            background-size: cover;
+        }
+
+
+        .container {
+            float: right;
+            width: 50%;
+            height: 1024px;
+            background-color: #505050;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+            margin-top: 50px;
+        }
+
+        .form{
+            display: block;
+            align-items: center;
+        }
+
+        .signIn {
+            position: relative;
+            width: 498.49px;
+            height: 174px;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        .signIn a{
+            color: #3297D3;
+        }
+
+        .agreement a {
+            color: #FFFFFF;
+        }
+
+        button {
+            background-color: #3297D3;
+            width: 465px;
+            height: 55px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover{
+            opacity: 0.8;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+
+        .inputBox{
+            position: relative;
+            width: 465px;
+            height: 55px;
+            margin: 0 auto;
+            background: #FFFDFD;
+            margin-bottom: 27px;
+            border-radius: 10px;
+        }
+
+        .inputBox input{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0 20px;
+            font-size: 18px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .inputBox input::placeholder{
+            color: #ccc;
+        }
+
+        #toggle,#toggle2{
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 18px;
+            background: url(Vector.png);
+            cursor: pointer;
+        }
+        #toggle.hide, #toggle2.hide{
+            background: url(Vector.png);
+        }
+
+        footer {
+            position: absolute;
+            width: 212px;
+            height: 15px;
+            left: 610px;
+            top: 994px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            color: #FFFFFF;
+        }         
+        /* Untuk Smartphone */
+        @media all and (max-width: 500px) {
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .backgroundIMG {
+            float: none;
+            position: absolute;
+            max-width: 500;
+            max-height: 100%;
+            background-size: auto;
+        }
+
+        header {
+            float: none;
+            width: 240px;
+            height: 109px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            float: none;
+            z-index: 10;
+            position: absolute;
+            padding-top: 20px;
+            left: 200px;
+            width: 371px;
+            height: 548px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            line-height: 39px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .inputBox {
+            width: 312px;
+            height: 36.9px;
+            margin-bottom: 18px;
+        }
+
+        .signIn {
+            width: 320px;
+            height: 126.22px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        button {
+            width: 100%;
+            height: 37px;
+        }
+
+        footer {
+            position: absolute;
+            float: none;
+            left: 280px;
+        }
+
+        }
+    </style>
+    <body>
+        <header>
+            <a href="home.html"><img class="logo" src="img/logoMocuci.png"></a>
+        </header>
+        
+        <div class="backgroundIMG">
+            <img src="img/bglogin.png" alt="MOCUCI.ID">
+        </div>
+    
+        <div class="container">
+            <h1>Daftar</h1>
+
+            <br>
+                <form>
+                    <div class="inputBox"><input type="text" placeholder="Nama Lengkap" name="" required> <br></div>
+                    <div class="inputBox"><input type="email" placeholder="Email" name="" required> <br></div>
+                    <div class="inputBox"><input type="text" placeholder="Username" name="" required> <br></div>
+                    <div class="inputBox"><input type="number" placeholder="Nomor Telepon" name="" required> <br></div>
+
+                    <div class="inputBox">
+                        <input type="password" name="" placeholder="Kata Sandi" id="password" required>
+                        <div id="toggle" onclick="showHide();"></div>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="password" name="" placeholder="Konfirmasi Kata Sandi" id="password2" required>
+                        <div id="toggle2" onclick="showHide2();"></div>
+                    </div>
+
+                    <script type="text/javascript">
+                        const password1 = document.getElementById('password');
+                        const password2 = document.getElementById('password2');
+                        const toggle = document.getElementById('toggle');
+                        const toggle2 = document.getElementById('toggle2');
+                        
+                        function showHide(){
+                            if(password.type === 'password'){
+                                password.setAttribute('type', 'text');
+                                toggle.classList.add('hide')
+                            } else{
+                                password.setAttribute('type', 'password');
+                                toggle.classList.remove('hide')
+                            }
+                        }
+
+                        function showHide2(){
+                            if(password2.type === 'password'){
+                                password2.setAttribute('type', 'text');
+                                toggle2.classList.add('hide')
+                            } else{
+                                password2.setAttribute('type', 'password');
+                                toggle2.classList.remove('hide')
+                            }
+                        }
+                    </script>
+                </form>
+                <br>
+
+            <div class="signIn">
+                <p class="agreement">Dengan mengklik <b>Daftar</b>, Anda menyetujui <a href="#">Kebijakan Privasi</a> dan <a href="#">Syarat dan Ketentuan</a> kami.</p>
+                <br>
+                <a href="login.html"><button>Daftar</button></a>
+                <br><br>
+                <p>Sudah memiliki akun? <a href="login.html">Masuk Sekarang</a></p>
+            </div>
+            <br><br>
+        </div>
+        <footer>© Mocuci.id 2022. All rights reserved</footer>
+    </body>
+
+</html>
